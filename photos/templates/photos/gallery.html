@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+      .image-thumbail{
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
+
+
+  </head>
+  <body class="m-5">
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-header">
+                Categories
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">All</li>
+
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+
+                    <a href="{% url 'add' %}"class="btn btn-block btn-dark m-1">Add photo</a>
+
+              </ul>
+            </div>          </div>
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card my-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
+                   class="image-thumbail"
+                    alt="image">
+                  <div class="card-body">
+                    <small>Category:pets</small>
+                  </div>
+                  <a href="{% url 'photo' 1 %}"class="btn btn-outline-dark btn-sm m-1">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
