@@ -12,8 +12,8 @@
         <div class="col">
           <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Go back</a>
           <div style="height: 90vh;">
-            <img style="max-width:100%; max-height:100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" alt="">
-            <p>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+            <img style="max-width:100%; max-height:100%;" src="{{photo.image.url}}" alt="">
+            <p>{{photo.description}}</p>
           </div>
         </div>
       </div>
